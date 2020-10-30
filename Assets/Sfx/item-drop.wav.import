@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/item-drop.wav-71f5af7db630dc465d599927e2103ddd.sample"
+
+[deps]
+
+source_file="res://Assets/Sfx/item-drop.wav"
+dest_files=[ "res://.import/item-drop.wav-71f5af7db630dc465d599927e2103ddd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
