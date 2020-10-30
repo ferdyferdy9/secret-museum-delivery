@@ -3,12 +3,11 @@
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/spriteframes.tres" type="SpriteFrames" id=2]
 
-[sub_resource type="CapsuleShape2D" id=9]
+[sub_resource type="CapsuleShape2D" id=10]
 radius = 4.0
 height = 2.0
 
-[sub_resource type="Animation" id=1]
-resource_name = "idle_down"
+[sub_resource type="Animation" id=11]
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -22,8 +21,7 @@ tracks/0/keys = {
 "values": [ "idle_down" ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "idle_left"
+[sub_resource type="Animation" id=12]
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -37,8 +35,7 @@ tracks/0/keys = {
 "values": [ "idle-left" ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "idle_right"
+[sub_resource type="Animation" id=13]
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -52,8 +49,7 @@ tracks/0/keys = {
 "values": [ "idle_right" ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "idle_up"
+[sub_resource type="Animation" id=14]
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -67,8 +63,7 @@ tracks/0/keys = {
 "values": [ "idle_up" ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "run_down"
+[sub_resource type="Animation" id=15]
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -82,8 +77,7 @@ tracks/0/keys = {
 "values": [ "run_down" ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "run_left"
+[sub_resource type="Animation" id=16]
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -97,8 +91,7 @@ tracks/0/keys = {
 "values": [ "run_left" ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "run_right"
+[sub_resource type="Animation" id=17]
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -112,8 +105,7 @@ tracks/0/keys = {
 "values": [ "run_right" ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "run_up"
+[sub_resource type="Animation" id=9]
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -128,6 +120,7 @@ tracks/0/keys = {
 }
 
 [node name="Player" type="RigidBody2D"]
+collision_layer = 2
 collision_mask = 15
 mode = 2
 linear_damp = 5.0
@@ -140,14 +133,14 @@ animation = "idle_down"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 6 )
 rotation = 1.5708
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/idle_down = SubResource( 1 )
-anims/idle_left = SubResource( 2 )
-anims/idle_right = SubResource( 3 )
-anims/idle_up = SubResource( 4 )
-anims/run_down = SubResource( 5 )
-anims/run_left = SubResource( 6 )
-anims/run_right = SubResource( 7 )
-anims/run_up = SubResource( 8 )
+anims/idle_down = SubResource( 11 )
+anims/idle_left = SubResource( 12 )
+anims/idle_right = SubResource( 13 )
+anims/idle_up = SubResource( 14 )
+anims/run_down = SubResource( 15 )
+anims/run_left = SubResource( 16 )
+anims/run_right = SubResource( 17 )
+anims/run_up = SubResource( 9 )

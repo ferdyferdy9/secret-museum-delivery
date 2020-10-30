@@ -8,8 +8,10 @@ export var max_speed = 100
 
 onready var anim_player = $AnimationPlayer
 
+const cart_scene = preload("res://Player/Cart.tscn")
+
 var input_vec:Vector2
-var state = IDLE
+var state = IDLE setget set_state
 var facing = face.DOWN setget set_facing
 
 const animations = {
@@ -59,11 +61,15 @@ func update_face():
 
 
 func set_facing(new_face):
-	if facing == new_face:
-		return
-	
-	facing = new_face
-	update_animation()
+	if facing != new_face:
+		facing = new_face
+		update_animation()
+
+
+func set_state(new_state):
+	if state != new_state:
+		state = new_state
+		update_animation()
 
 
 func update_animation():
