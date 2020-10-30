@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Museum_MainHall.png-afb3d736317354d285a7d56154eb0c3d.stex"
+path="res://.import/Museum_MainHall_floor.png-59ebbeda623d2a812e89ebd354cb2dc6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tileset/Wall/Museum_MainHall.png"
-dest_files=[ "res://.import/Museum_MainHall.png-afb3d736317354d285a7d56154eb0c3d.stex" ]
+source_file="res://Assets/Background/Museum_MainHall_floor.png"
+dest_files=[ "res://.import/Museum_MainHall_floor.png-59ebbeda623d2a812e89ebd354cb2dc6.stex" ]
 
 [params]
 
