@@ -19,7 +19,7 @@ const animations = {
 		face.LEFT: "idle_left",
 		face.RIGHT: "idle_right",
 	},
-	RUN: {
+	WALK: {
 		face.UP: "run_up",
 		face.DOWN: "run_down",
 		face.LEFT: "run_left",
