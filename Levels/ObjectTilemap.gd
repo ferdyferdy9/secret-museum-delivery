@@ -3,6 +3,7 @@ extends TileMap
 const packedScenes = {
 	"box": preload("res://Objects/Box.tscn"),
 	"player": preload("res://Player/Player.tscn"),
+	"jewel": preload("res://Objects/Jewel.tscn")
 }
 
 func _ready():
