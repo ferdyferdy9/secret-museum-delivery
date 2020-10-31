@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Visitors/VisitorBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Visitor/Visitor_Idle.png" type="Texture" id=2]
+[ext_resource path="res://Visitors/FOV.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "idle_left"
@@ -53,7 +54,26 @@ tracks/0/keys = {
 [node name="AnimatedSprite" parent="." index="0"]
 texture = ExtResource( 2 )
 
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 0, 8 )
+
 [node name="AnimationPlayer" parent="." index="2"]
 anims/idle_left = SubResource( 1 )
 anims/idle_right = SubResource( 2 )
 anims/idle_up = SubResource( 3 )
+
+[node name="FOV" type="Sprite" parent="." index="4"]
+modulate = Color( 1, 1, 1, 0.627451 )
+show_behind_parent = true
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+centered = false
+offset = Vector2( 0, -8 )
+
+[node name="Area2D" type="Area2D" parent="FOV" index="0"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FOV/Area2D" index="0"]
+polygon = PoolVector2Array( 0, 0, 14, 6, 14, -6 )
+[connection signal="area_entered" from="FOV/Area2D" to="." method="_on_Area2D_area_entered"]

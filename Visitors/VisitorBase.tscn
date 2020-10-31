@@ -2,11 +2,10 @@
 
 [ext_resource path="res://Visitors/VisitorBase.gd" type="Script" id=1]
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=1]
 radius = 5.05814
 
-[sub_resource type="Animation" id=1]
-resource_name = "idle_down"
+[sub_resource type="Animation" id=2]
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:frame")
 tracks/0/interp = 1
@@ -30,7 +29,12 @@ hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 5 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/idle_down = SubResource( 1 )
+anims/idle_down = SubResource( 2 )
+
+[node name="WanderTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+[connection signal="timeout" from="WanderTimer" to="." method="_on_WanderTimer_timeout"]
