@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/MenuScreen/Buttons/OptionsButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/MenuScreen/Buttons/CreditButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Menu Screen/SecretMuseumDelivery.png" type="Texture" id=4]
-[ext_resource path="res://Assets/MenuScreen/Sprites/Sprite-0007.png" type="Texture" id=5]
+[ext_resource path="res://Assets/MenuScreen/Sprites/Background.png" type="Texture" id=5]
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
