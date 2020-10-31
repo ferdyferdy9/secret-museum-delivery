@@ -4,11 +4,11 @@
 [ext_resource path="res://Assets/Objects/Object_CartHorizontal.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Objects/Object_CartVertical.png" type="Texture" id=3]
 
-[sub_resource type="CapsuleShape2D" id=11]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 8.0
 height = 5.0
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "left"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
@@ -35,8 +35,7 @@ tracks/1/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "right"
+[sub_resource type="Animation" id=3]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
 tracks/0/interp = 1
@@ -62,8 +61,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "vertical"
+[sub_resource type="Animation" id=4]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
 tracks/0/interp = 1
@@ -118,14 +116,17 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 3 )
 rotation = 1.5708
-shape = SubResource( 11 )
+shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/left = SubResource( 3 )
-anims/right = SubResource( 1 )
-anims/vertical = SubResource( 2 )
+anims/left = SubResource( 2 )
+anims/right = SubResource( 3 )
+anims/vertical = SubResource( 4 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 10 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/facing/blend_position = Vector2( 0, 0 )
+
+[node name="ItemStackPosition" type="Position2D" parent="."]
+position = Vector2( 0, 1 )

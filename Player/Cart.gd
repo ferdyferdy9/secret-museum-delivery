@@ -10,6 +10,14 @@ func _ready():
 
 func _process(delta):
 	update_face()
+	update()
+
+
+func _draw():
+	if target == null:
+		return
+	
+	draw_line(Vector2.ZERO, target.global_position - global_position, Color.black)
 
 
 func _physics_process(delta):
