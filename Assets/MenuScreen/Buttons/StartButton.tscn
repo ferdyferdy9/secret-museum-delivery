@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/MenuScreen/Buttons/ButtonMenu.tscn" type="PackedScene" id=1]
+
+[node name="StartButton" instance=ExtResource( 1 )]
+text = "Start"
