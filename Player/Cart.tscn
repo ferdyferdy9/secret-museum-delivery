@@ -105,7 +105,7 @@ nodes/facing/position = Vector2( -140, 140 )
 node_connections = [ "output", 0, "facing" ]
 
 [node name="Cart" type="RigidBody2D"]
-collision_layer = 8
+collision_layer = 32
 collision_mask = 15
 mode = 2
 script = ExtResource( 1 )
