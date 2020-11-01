@@ -25,8 +25,6 @@ func _process(delta):
 	if abs(velocity.angle_to(Vector2.DOWN)) < PI*0.25:
 		anim_player.play("idle_down")
 	
-	print(velocity.angle_to(Vector2.RIGHT))
-	
 	if velocity.length_squared() != 0:
 		$FOV.rotation = velocity.angle()
 

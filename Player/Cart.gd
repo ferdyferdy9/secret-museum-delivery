@@ -24,7 +24,7 @@ func add_item(item:Node2D):
 	if item.get_parent():
 		item.get_parent().remove_child(item)
 	$ItemStackPosition.add_child(item)
-	item.global_position = $ItemStackPosition.global_position - $ItemStackPosition.get_child_count() * 8
+	item.global_position = $ItemStackPosition.global_position + Vector2.UP * $ItemStackPosition.get_child_count() * 8
 
 
 func _physics_process(delta):

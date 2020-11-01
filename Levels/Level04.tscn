@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Tileset/BackgroundTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Levels/BackgroundTilemap.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Assets/Objects/Object_Diamond.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Objects/Object_YellowMineral.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Visitor/Visitor_Idle.png" type="Texture" id=10]
+[ext_resource path="res://Assets/MenuScreen/Buttons/TitleScreen.tscn" type="PackedScene" id=11]
 
 [sub_resource type="TileSet" id=1]
 0/name = "box"
@@ -82,7 +83,7 @@
 4/shape_one_way_margin = 0.0
 4/shapes = [  ]
 4/z_index = 0
-5/name = "Object_Diamond.png 5"
+5/name = "jewel"
 5/texture = ExtResource( 8 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
@@ -97,8 +98,12 @@
 5/shapes = [  ]
 5/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 137.914, 93.672 )
+
 [node name="Level04" type="Node"]
 script = ExtResource( 7 )
+next_level = ExtResource( 11 )
 
 [node name="BackgroundTilemap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -125,3 +130,11 @@ __meta__ = {
 }
 
 [node name="YSort" type="YSort" parent="."]
+
+[node name="WinArea" type="Area2D" parent="."]
+position = Vector2( 128.388, 105.468 )
+collision_layer = 512
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinArea"]
+shape = SubResource( 2 )

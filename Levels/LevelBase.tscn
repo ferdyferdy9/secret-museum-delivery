@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Tileset/BackgroundTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Levels/BackgroundTilemap.gd" type="Script" id=2]
@@ -82,7 +82,7 @@
 4/shape_one_way_margin = 0.0
 4/shapes = [  ]
 4/z_index = 0
-5/name = "Object_Diamond.png 5"
+5/name = "jewel"
 5/texture = ExtResource( 8 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
@@ -96,15 +96,6 @@
 5/shape_one_way_margin = 0.0
 5/shapes = [  ]
 5/z_index = 0
-
-[sub_resource type="GDScript" id=2]
-script/source = "extends Area2D
-
-
-
-func _on_WinArea_body_entered(body):
-	pass # Replace with function body.
-"
 
 [node name="LevelBase" type="Node"]
 script = ExtResource( 7 )
@@ -136,7 +127,6 @@ __meta__ = {
 [node name="WinArea" type="Area2D" parent="."]
 collision_layer = 512
 collision_mask = 32
-script = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WinArea"]
-[connection signal="body_entered" from="WinArea" to="WinArea" method="_on_WinArea_body_entered"]
+[connection signal="body_entered" from="WinArea" to="." method="_on_WinArea_body_entered"]
