@@ -35,13 +35,6 @@ func _process(delta):
 	get_input()
 	update_face()
 
-
-func _physics_process(delta):
-	linear_velocity = linear_velocity.clamped(max_speed)
-	
-	apply_central_impulse(input_vec * acc_power * delta)
-
-
 func get_input():
 	input_vec.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	input_vec.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
