@@ -73,8 +73,8 @@ offset = Vector2( 0, -8 )
 
 [node name="Area2D" type="Area2D" parent="FOV" index="0"]
 collision_layer = 0
-collision_mask = 2
+collision_mask = 32
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FOV/Area2D" index="0"]
 polygon = PoolVector2Array( 0, 0, 14, 6, 14, -6 )
-[connection signal="area_entered" from="FOV/Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="FOV/Area2D" to="." method="_on_Area2D_body_entered"]

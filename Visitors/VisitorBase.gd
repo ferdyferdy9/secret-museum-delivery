@@ -51,5 +51,5 @@ func _on_WanderTimer_timeout():
 	wonder_target = global_position + offset
 
 
-func _on_Area2D_area_entered(area):
+func _on_Area2D_body_entered(body):
 	emit_signal("player_busted")
